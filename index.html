@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input id="text1" type="text"> +
+    <input id="text2" type="text">
+    <input type="button" onclick="foo()" value="=">
+    <p id="answer"></p>
+
+    <h1 class="primer1">Игра в пельменя</h1>
+    <h6 class="primer1">OMG</h6>
+    <p class="primer1">
+        После этой игры вы станете пельменем
+    </p>
+    <input type="text" placeholder="Введите текст">
+    <input type="datetime" name="data" id="data">
+    <input type="button" value="Нажми">
+    <img src="https://vkusno-i-prosto.ru/wp-content/uploads/2009/11/89696762_s.jpg" alt="">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSv20iyzBUn124xF1VQQfDN5H62iSzIr3PE2Q&usqp=CAU"
+        alt="">
+
+    <style>
+        .primer1 {
+            color: #fff;
+        }
+
+        body {
+            height: 100vh;
+            background: url(kosmos.jpg) center no-repeat;
+            background-size: cover;
+        }
+
+        h1 {
+            font-size: 100px;
+        }
+
+        img {
+            width: 200px;
+            height: 200px;
+            object-fit: contain
+                /*cover*/
+            ;
+        }
+
+        button[name="run_script"] {
+            border: 4px outset black;
+            border-width: 5px;
+            border-radius: 50px;
+            padding: 10px 25px;
+            background: #ff9900;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: white;
+            background: #fc0;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            padding: 10px;
+        }
+
+        button[name="run_script"]:hover {
+            background: #ff6600;
+        }
+
+        .anim {
+            animation: 0.5s infinite alternate slidein;
+        }
+
+        @keyframes slidein {
+            0% {
+                color: purple;
+                margin-left: -100px;
+            }
+
+            100% {
+                color: #fff;
+                margin-left: 100px;
+            }
+        }
+    </style>
+    <p class="anim">
+        Пельмени это хорошо
+    </p>
+    <script>
+
+        function foo() {
+            var n1 = document.getElementById("text1").value;
+            var n2 = document.getElementById("text2").value;
+            document.getElementById("answer").innerHTML = Number(n1) + Number(n2);
+
+        }
+
+        var a = "БАБАХ!!!!!!!!";
+        function my_fung() {
+            alert(a);
+        }
+    </script>
+    <input type="button" onclick="my_fung()" value="Взорвать игру">
+</body>
+
+</html>
